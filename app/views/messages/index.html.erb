@@ -1,15 +1,25 @@
 <div class="wrapper">
+<!-- 左半分 -->
   <div class="side-bar">
-    <div class="side-bar-top"></div>
+<!-- ユーザー名とチャット作成リンク -->
+    <div class="side-bar-top">
+      <a class="user-name" href="">Somari</a>
+      <a class="chat-btn" href="">チャットを生成する</a>
+    </div>
+<!-- チャットルーム一覧表示 -->
     <div class="side-bar-contents">
       <%= render "side_bar"%>
     </div>
   </div>
+<!-- 右半分 -->
   <div class="main-chat">
+<!--  -->
     <div class="main-chat-top"></div>
+<!--  -->
     <div class="main-chat-contents">
       <%= render "main_chat"%>
     </div>
+<!-- 入力フォーム -->
     <div class="main-chat-form"></div>
   </div>
 </div>
