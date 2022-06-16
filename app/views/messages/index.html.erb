@@ -15,8 +15,8 @@
   <div class="main-chat">
 <!-- チャットルーム概要 -->
     <div class="main-chat-top">
-    <div class="room-summary">maid_FunClub♡</div>
-    <a class="chat-end-btn" href="">チャットを終了する</a>
+    <div class="room-summary"><%= @room.name %></div>
+    <%= link_to "チャットを終了する", room_path(@room), method: :delete, class:"chat-end-btn" %>
     </div>
 <!-- メッセージ一覧 -->
     <div class="main-chat-contents">
@@ -25,13 +25,15 @@
 <!-- 入力フォーム -->
     <div class="main-chat-form">
         <div class="input-box">
-          <input type="text" class="text-box" placeholder="type a message">
-          <label class="form-image">
+          <%= form_with model: [@room, @message], class: 'input-box', local: true do |f| %>
+          <div><%= f.text_field :content, class: 'text-box', placeholder: 'type a message' %></div>
+          <div><label class="form-image">
             <span class="image-file">画像</span>
-            <input type="file" class="hidden">
-          </label> 
-          <input type="submit" class="submit-btn" value="送信">
+            <%= f.file_field :image, class: 'hidden' %>
+          </label>
+          <%= f.submit '送信', class: 'submit-btn' %></div>
+          <% end %>
+        </div>
       </div>
-    </div>
   </div>
 </div>
