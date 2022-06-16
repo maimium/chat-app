@@ -47,9 +47,9 @@ a {
   overflow-x: hidden;
 }
 
-.room, .room-name{
+ .room-name{
   color: white;
-  padding: 20px 0 40px;
+  padding: 10px 0 40px;
 }
 
 /*------------------------------*/
