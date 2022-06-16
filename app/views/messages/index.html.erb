@@ -3,7 +3,7 @@
   <div class="side-bar">
 <!-- ユーザー名とチャット作成リンク -->
     <div class="side-bar-top">
-      <a class="user-name" href="">Somari</a>
+      <%= link_to current_user.name, edit_user_path(current_user),class:"user-name" %>
       <a class="chat-start-btn" href="">チャットを生成する</a>
     </div>
 <!-- チャットルーム一覧表示 -->
