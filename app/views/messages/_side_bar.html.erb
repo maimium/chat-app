@@ -1,46 +1,9 @@
-  <div class="room">
-    <a class="room-name" href="">techroom1</a>
-  </div>
-
-  <div class="room">
-    <a class="room-name" href="">techroom1</a>
-  </div>
-
-
-  <div class="room">
-    <a class="room-name" href="">techroom1</a>
-  </div>
-
-
-  <div class="room">
-    <a class="room-name" href="">techroom1</a>
-  </div>
-
-
-  <div class="room">
-    <a class="room-name" href="">techroom1</a>
-  </div>
-
-
-  <div class="room">
-    <a class="room-name" href="">techroom1</a>
-  </div>
-
-
-  <div class="room">
-    <a class="room-name" href="">techroom1</a>
-  </div>
-
-  <div class="room">
-    <a class="room-name" href="">techroom1</a>
-  </div>
-
-
-  <div class="room">
-    <a class="room-name" href="">techroom1</a>
-  </div>
-
-
-  <div class="room">
-    <a class="room-name" href="">techroom1</a>
+<div class="rooms">
+   <% current_user.rooms.each do |room| %>
+      <div class="room">
+        <div class="room-name">
+          <a class="room-name" href="#"><%= room.name %></a>
+        </div>
+      </div>
+    <% end %>
   </div>
